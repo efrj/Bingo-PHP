@@ -1,3 +1,3 @@
 # Bingo PHP
 
-Developed with Nette PHP Framework
+Developed with PHP, HTML5, CSS and Javascript
