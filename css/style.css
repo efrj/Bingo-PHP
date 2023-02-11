@@ -1,0 +1,25 @@
+.bingo-card {
+    /*width: 250px;
+    height: 250px;*/
+    margin: 10px;
+    display: inline-block;
+    /*border: 1px solid black;*/
+}
+.bingo-card td, th {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid black;
+}
+.bingo-card th {
+    background-color: #333;
+    color: #fff;
+}
+.bingo-card td {
+    background-color: #fff;
+}
+.not-number {
+    background-color: #000 !important;
+    color: #fff;
+}
