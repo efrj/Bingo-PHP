@@ -1,25 +1,146 @@
+/* Styles for Bingo Card */
 .bingo-card {
-    /*width: 250px;
-    height: 250px;*/
-    margin: 10px;
-    display: inline-block;
-    /*border: 1px solid black;*/
-}
-.bingo-card td, th {
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    vertical-align: middle;
-    border: 1px solid black;
-}
-.bingo-card th {
-    background-color: #333;
-    color: #fff;
-}
-.bingo-card td {
+    margin-bottom: 20px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
     background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
-.not-number {
-    background-color: #000 !important;
-    color: #fff;
+
+.bingo-card table {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.bingo-card th {
+    background-color: #0275d8;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px 5px;
+}
+
+.bingo-card td {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.bingo-card td:hover {
+    background-color: #f8f9fa;
+}
+
+.bingo-card td.marked {
+    background-color: #28a745;
+    color: white;
+}
+
+.bingo-card td.marked:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 50%;
+}
+
+.bingo-card td.free-space {
+    background-color: #17a2b8;
+    color: white;
+}
+
+/* Styles for players */
+.player-info {
+    padding: 8px 12px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+}
+
+.player-info i {
+    margin-right: 8px;
+    font-size: 18px;
+    color: #0275d8;
+}
+
+.player-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Styles for drawn numbers */
+.drawn-numbers {
+    margin-bottom: 20px;
+}
+
+.number-ball {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #0275d8;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 35px;
+    margin: 0 5px 5px 0;
+}
+
+/* Styles for winner badger */
+.winner-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-30deg);
+    background-color: rgba(255, 193, 7, 0.9);
+    color: #333;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 8px;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) rotate(-30deg) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(-30deg) scale(1.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-30deg) scale(1);
+    }
+}
+
+/* Style for winner*/
+#winnerModal .modal-content {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#winnerModal .modal-header {
+    border-bottom: none;
+}
+
+#winnerModal .modal-body {
+    padding: 30px;
+}
+
+#winnerModal .fas.fa-trophy {
+    color: #ffc107;
+    margin-bottom: 20px;
 }
