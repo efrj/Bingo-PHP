@@ -17,12 +17,31 @@ if (isset($_POST['winner_card']) && isset($_POST['winner_name'])) {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <title>Bingo</title>
     </head>
     <body>
         <div class="container">
-            <h1 class="text-center"><i class="bi bi-table"></i> Bingo</h1>
+            <div class="vegas-title-container">
+                <div class="luxury-header">
+                    <div class="wealth-image">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a" alt="Successful businessman with luxury watch">
+                    </div>
+                    <div class="title-area">
+                        <h1 class="vegas-title text-center">
+                            <span class="vegas-dollar-sign">$</span> 
+                            <span class="vegas-text">BINGO</span> 
+                            <span class="vegas-dollar-sign">$</span>
+                        </h1>
+                        <div class="vegas-subtitle">MILLIONAIRE'S CLUB</div>
+                    </div>
+                </div>
+                <div class="gold-bar"></div>
+                <div class="vegas-lights"></div>
+            </div>
             
             <div class="bingo-controls mb-4">
                 <div class="row">
